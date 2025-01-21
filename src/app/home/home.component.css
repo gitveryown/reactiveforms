@@ -1,0 +1,24 @@
+.text {
+  margin-top: 3.5rem;
+  font-family: "Roboto", serif;
+  text-align: center;
+  font-size: medium;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 4em;
+}
+
+.welcome {
+  font-size: 1.5em;
+}
+
+.startBtn {
+  color: white;
+  background-color: rgb(57, 57, 57);
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+}
