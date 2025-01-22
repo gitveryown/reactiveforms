@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Will/angular/reactive-forms/C#Backend/angularBackend.csproj": {}
+    "/Users/Will/angular/reactive-forms/server-side/angularBackend.csproj": {}
   },
   "projects": {
-    "/Users/Will/angular/reactive-forms/C#Backend/angularBackend.csproj": {
+    "/Users/Will/angular/reactive-forms/server-side/angularBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Will/angular/reactive-forms/C#Backend/angularBackend.csproj",
+        "projectUniqueName": "/Users/Will/angular/reactive-forms/server-side/angularBackend.csproj",
         "projectName": "angularBackend",
-        "projectPath": "/Users/Will/angular/reactive-forms/C#Backend/angularBackend.csproj",
+        "projectPath": "/Users/Will/angular/reactive-forms/server-side/angularBackend.csproj",
         "packagesPath": "/Users/Will/.nuget/packages/",
-        "outputPath": "/Users/Will/angular/reactive-forms/C#Backend/obj/",
+        "outputPath": "/Users/Will/angular/reactive-forms/server-side/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/Will/.nuget/NuGet/NuGet.Config"
@@ -47,6 +47,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             }
           },
           "imports": [
