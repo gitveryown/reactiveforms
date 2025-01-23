@@ -9,19 +9,46 @@
     </nav>
 </header>
 
+
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
+    <!-- First Name -->
     <label for="first-name">First Name:</label>
     <input required type="text" id="first-name" formControlName="firstName">
+    <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)"
+        [ngStyle]="{color:'red', display:'block'}">
+        <p *ngIf="firstName?.hasError('required')">
+            First name is required.
+        </p>
+        <p *ngIf="firstName?.hasError('minlength')">
+            First name must be at least 4 characters long.
+        </p>
+    </div>
 
-
+    <!-- Last Name -->
     <label for="last-name">Last Name:</label>
-    <input required type="text" id="last-name" formControlName="lastName">
+    <input required type="text" id="last-name" formControlName="lastName" required>
+    <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)" [ngStyle]="{color:'red', display:'block'}">
+        <p *ngIf="lastName?.hasError('required')">
+            Last name is required.
+        </p>
+        <p *ngIf="lastName?.hasError('minlength')">
+            Last name must be at least 4 characters long.
+        </p>
+    </div>
 
+    <!-- Email -->
     <label for="email">Email:</label>
     <input required type="email" id="email" formControlName="email">
+    <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" [ngStyle]="{color:'red', display:'block'}">
+        <p *ngIf="email?.hasError('required')">
+            Email is required.
+        </p>
+        <p *ngIf="email?.hasError('email')">
+            Please enter a valid email address.
+        </p>
+    </div>
 
-    <button type="submit">Submit</button>
-
+    <button type="submit" [disabled]="form.invalid">Submit</button>
 
 </form>
