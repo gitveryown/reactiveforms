@@ -1,10 +1,19 @@
 import { Routes } from '@angular/router';
-import { FormComponent } from './form/form.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'form', component: FormComponent },
-  { path: 'login', component: LoginComponent },
+  {
+    path: '',
+    loadComponent: () =>
+      import('./home/home.component').then((c) => c.HomeComponent),
+  },
+  {
+    path: 'form',
+    loadComponent: () =>
+      import('./form/form.component').then((c) => c.FormComponent),
+  },
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./login/login.component').then((c) => c.LoginComponent),
+  },
 ];

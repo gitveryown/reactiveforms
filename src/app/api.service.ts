@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  private baseUrl: string = 'https://localhost:5000/api';
+  private baseUrl = 'http://localhost:5000/api/form';
 
-  constructor(private https: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-  getGreeting(): Observable<any> {
-    return this.https.get(`${this.baseUrl}/message/greet`);
+  sendFormData(data: any): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post(this.baseUrl, data, { headers });
   }
 }

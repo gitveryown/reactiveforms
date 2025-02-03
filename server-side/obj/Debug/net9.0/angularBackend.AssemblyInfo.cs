@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("angularBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c15c576cf97b9ad4f60cb6df343ab4bee39b85bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6a32bf9f1e18f7fe4145c791e98e14a5181ca15")]
 [assembly: System.Reflection.AssemblyProductAttribute("angularBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("angularBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

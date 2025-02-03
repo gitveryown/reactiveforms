@@ -1,5 +1,5 @@
 import { NgIf, NgStyle } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import {
   ReactiveFormsModule,
   FormGroup,
@@ -7,6 +7,9 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { ApiService } from '../api.service';
+import { response } from 'express';
+import { error } from 'console';
 
 @Component({
   selector: 'app-form',
@@ -17,8 +20,9 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class FormComponent implements OnInit {
   form!: FormGroup;
+  private apiService = inject(ApiService);
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -33,6 +37,7 @@ export class FormComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
     });
   }
+
   get firstName() {
     return this.form.get('firstName');
   }
@@ -44,7 +49,14 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    const value = this.form.value;
-    console.log('This is the values', value);
+    if (this.form.valid) {
+      const formData = this.form.value;
+      console.log('This is the values', formData);
+      this.apiService.sendFormData(formData).subscribe({
+        next: (response) => console.log('Submission successful', response),
+        error: (error) => console.log('Submission unsucessful', error),
+        complete: () => console.log('Request completed successfully!'),
+      });
+    }
   }
 }
