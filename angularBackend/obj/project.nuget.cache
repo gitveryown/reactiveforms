@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "19p6rTXkLKY=",
+  "dgSpecHash": "fvaGCCnVeK0=",
   "success": true,
-  "projectFilePath": "/Users/Will/angular/reactive-forms/server-side/angularBackend.csproj",
+  "projectFilePath": "/Users/Will/angular/reactive-forms/angularBackend/angularBackend.csproj",
   "expectedPackageFiles": [
     "/Users/Will/.nuget/packages/microsoft.aspnetcore.openapi/9.0.1/microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
     "/Users/Will/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",

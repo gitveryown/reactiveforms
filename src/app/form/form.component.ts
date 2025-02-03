@@ -8,8 +8,7 @@ import {
 } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { ApiService } from '../api.service';
-import { response } from 'express';
-import { error } from 'console';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form',
@@ -22,7 +21,7 @@ export class FormComponent implements OnInit {
   form!: FormGroup;
   private apiService = inject(ApiService);
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -54,7 +53,7 @@ export class FormComponent implements OnInit {
       console.log('This is the values', formData);
       this.apiService.sendFormData(formData).subscribe({
         next: (response) => console.log('Submission successful', response),
-        error: (error) => console.log('Submission unsucessful', error),
+        error: (error) => console.log('Submission unsuccessful', error),
         complete: () => console.log('Request completed successfully!'),
       });
     }

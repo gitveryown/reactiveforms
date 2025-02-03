@@ -10,13 +10,13 @@ using System.Text.Json;
 
 namespace angularBackend.Controllers
 {
-    [ApiController]
     [Route("api/form")]
+    [ApiController]
     public class FormController : ControllerBase
     {
 
 
-        [HttpPost()]
+        [HttpPost]
         public IActionResult RecieveFormData([FromBody] Users model)
         {
             if (model == null)

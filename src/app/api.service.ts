@@ -6,12 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  private baseUrl = 'http://localhost:5000/api/form';
+  public baseUrl = 'https://localhost:5000/api/form';
 
   constructor(private http: HttpClient) {}
 
   sendFormData(data: any): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(this.baseUrl, data, { headers });
+    return this.http.post(this.baseUrl, data);
   }
 }

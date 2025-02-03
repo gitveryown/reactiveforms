@@ -99,3 +99,5 @@
 /Users/Will/angular/reactive-forms/server-side/obj/Debug/net9.0/angularBackend.pdb
 /Users/Will/angular/reactive-forms/server-side/obj/Debug/net9.0/angularBackend.genruntimeconfig.cache
 /Users/Will/angular/reactive-forms/server-side/obj/Debug/net9.0/ref/angularBackend.dll
+/Users/Will/angular/reactive-forms/angularBackend/bin/Debug/net9.0/Npgsql.dll
+/Users/Will/angular/reactive-forms/angularBackend/obj/Debug/net9.0/angularBackend.sourcelink.json

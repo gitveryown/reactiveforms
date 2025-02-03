@@ -254,11 +254,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Will/angular/reactive-forms/server-side/angularBackend.csproj",
+      "projectUniqueName": "/Users/Will/angular/reactive-forms/angularBackend/angularBackend.csproj",
       "projectName": "angularBackend",
-      "projectPath": "/Users/Will/angular/reactive-forms/server-side/angularBackend.csproj",
+      "projectPath": "/Users/Will/angular/reactive-forms/angularBackend/angularBackend.csproj",
       "packagesPath": "/Users/Will/.nuget/packages/",
-      "outputPath": "/Users/Will/angular/reactive-forms/server-side/obj/",
+      "outputPath": "/Users/Will/angular/reactive-forms/angularBackend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/Will/.nuget/NuGet/NuGet.Config"
